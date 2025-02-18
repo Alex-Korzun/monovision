@@ -41,6 +41,11 @@ html {
     font-family: "Inter", sans-serif;
 }
 
+::selection {
+    background-color: var(--dark-color);
+    color: var(--light-color);
+}
+
 .container {
     padding: 0 var(--container-padding-inline);
 }
@@ -51,7 +56,20 @@ html {
     font-size: 40px;
     line-height: normal;
     color: var(--dark-color);
+    justify-self: center;
+    position: relative;
+
+    &::after {
+        content: '';
+        width: 75px;
+        height: 2px;
+        background-color: #000;
+        position: absolute;
+        bottom: -1px;
+        right: 0;
+    }
 }
+
 
 .promo {
     position: relative;
@@ -101,6 +119,7 @@ html {
 }
 
 .promo__location {
+    position: relative;
     margin-top: 100px;
     font-weight: 100;
     font-size: 16px;
@@ -114,6 +133,17 @@ html {
     a {
         color: var(--light-color);
         text-decoration: none;
+    }
+
+    &::before {
+        content: '';
+        display: block;
+        width: 40px;
+        height: 49px;
+        background: url('../icons/arrow.svg') center center / cover no-repeat;
+        position: absolute;
+        left: -45px;
+        top: -17px;
     }
 }
 
@@ -185,13 +215,37 @@ html {
     }
 
     li {
+        position: relative;
         margin-top: 10px;
         list-style-type: none;
         font-weight: 400;
         font-size: 16px;
         line-height: normal;
         color: var(--dark-color);
+
+        &:first-child::before {
+            content: '';
+            display: block;
+            position: absolute;
+            width: 15px;
+            height: 15px;
+            background: url('../icons/camera.svg') center center / cover no-repeat;
+            left: -30px;
+            top: 2px;
+        }
+
+        &:nth-child(3)::before {
+            content: '';
+            display: block;
+            position: absolute;
+            width: 15px;
+            height: 15px;
+            background: url('../icons/edit.svg') center center / cover no-repeat;
+            left: -30px;
+            top: 2px;
+        }
     }
+
 }
 
 .services__text {
