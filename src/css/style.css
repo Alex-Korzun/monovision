@@ -92,6 +92,12 @@ html {
     background: rgba(217, 217, 217, 0);
     border: 1px solid var(--light-color);
     cursor: pointer;
+    transition: all 0.3s ease-out;
+}
+
+.btn:hover {
+    box-shadow: 5px 5px 10px 0 rgba(255, 255, 255, 0.62);
+    font-weight: 500;
 }
 
 .promo__location {
