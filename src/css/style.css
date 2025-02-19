@@ -302,3 +302,62 @@ html {
         grid-column: 2/4;
     }
 }
+
+.customers {
+    padding: 80px 0 100px;
+    background-color: var(--light-color);
+}
+
+.customers__logo {
+    margin-top: 53px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+
+    img {
+        width: calc((100% - 90px) / 4);
+        box-shadow: 7px 7px 12px 0 rgba(0, 0, 0, 0.25);
+    }
+}
+
+footer {
+    padding: 88px 0;
+    background-color: #000;
+    color: var(--light-color);
+
+    .contact__info {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+
+        .social__network {
+            display: flex;
+            gap: 40px;
+
+            img {
+                padding: 5px;
+                width: 32px;
+                min-height: 32px;
+                color: var(--light-color);
+                background: rgba(217, 217, 217, 0);
+                border: 1px solid var(--light-color);
+                cursor: pointer;
+                transition: all 0.3s ease-out;
+            }
+        }
+    }
+
+    address {
+        font-weight: 400;
+        font-size: 20px;
+        color: var(--light-color);
+        font-style: normal;
+    }
+
+    a {
+        font-weight: 400;
+        font-size: 20px;
+        text-decoration: none;
+        color: var(--light-color);
+    }
+}
