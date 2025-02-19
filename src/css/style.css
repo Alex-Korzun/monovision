@@ -321,13 +321,13 @@ html {
 }
 
 footer {
-    padding: 88px 0;
+    padding: 88px var(--footer-padding-inline);
     background-color: #000;
     color: var(--light-color);
 
     .contact__info {
         display: flex;
-        justify-content: space-around;
+        justify-content: space-between;
         align-items: center;
 
         .social__network {
